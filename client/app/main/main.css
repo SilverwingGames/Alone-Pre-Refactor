@@ -5,6 +5,7 @@
 #banner {
     border-bottom: none;
     margin-top: -20px;
+    background-color: #6C7A89;
 }
 
 #banner h1 {
@@ -27,4 +28,9 @@
     padding: 30px 0;
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
+}
+
+#alone-emblem
+{
+  max-height: 300px;
 }

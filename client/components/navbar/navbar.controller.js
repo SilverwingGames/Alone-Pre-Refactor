@@ -2,10 +2,17 @@
 
 angular.module('aloneApp')
   .controller('NavbarCtrl', function ($scope, $location) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    }];
+    $scope.menu = [
+      {
+        'title': 'Home',
+        'link': '/'
+      },
+      {
+        'title': 'Reddit',
+        'type': '_blank',
+        'link': 'https://www.reddit.com/r/alone_incremental/'
+      }
+    ];
 
     $scope.isCollapsed = true;
 
