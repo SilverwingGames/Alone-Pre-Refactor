@@ -17,6 +17,7 @@ module.exports = function(app) {
   spMiddleware.attachDefaults(app);
 
   // Insert routes below
+  app.use('/api/messages', require('./api/message'));
   app.use('/api/things', spMiddleware.authenticate, require('./api/thing'));
 
   // All undefined asset or api routes should return a 404
