@@ -9,7 +9,7 @@ var errors = require('./components/errors');
 // Stormpath Middleware
 var stormpathExpressSdk = require('stormpath-sdk-express');
 var spMiddleware = stormpathExpressSdk.createMiddleware();
-
+var spAuth = spMiddleware.authenticate;
 
 module.exports = function(app) {
 
@@ -17,9 +17,8 @@ module.exports = function(app) {
   spMiddleware.attachDefaults(app);
 
   // Insert routes below
-  app.use('/api/events', require('./api/event'));
-  app.use('/api/notifications', require('./api/notification'));
-  app.use('/api/things', spMiddleware.authenticate, require('./api/thing'));
+  app.use('/api/events', spAuth, require('./api/event'));
+  app.use('/api/things', spAuth, require('./api/thing'));
 
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
