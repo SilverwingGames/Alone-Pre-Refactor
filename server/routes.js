@@ -17,6 +17,7 @@ module.exports = function(app) {
   spMiddleware.attachDefaults(app);
 
   // Insert routes below
+  app.use('/api/events', require('./api/event'));
   app.use('/api/notifications', require('./api/notification'));
   app.use('/api/things', spMiddleware.authenticate, require('./api/thing'));
 
