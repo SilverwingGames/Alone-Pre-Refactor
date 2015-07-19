@@ -17,7 +17,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li if-user ng-class="{active: isActive('/profile')}">
-          <a ui-sref="profile">Profile</a>
+          <a ui-sref="profile" tooltip-trigger="mouseenter" tooltip="View your profile">{{user.customData.userNickName}}</a>
         </li>
         <li if-not-user ng-class="{active: isActive('/register')}">
           <a ui-sref="register">Register</a>
