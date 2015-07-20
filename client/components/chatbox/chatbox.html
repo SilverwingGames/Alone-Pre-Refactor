@@ -1,0 +1,13 @@
+<div class="col-sm-3 col-md-2 sidebar" ng-controller="ChatCtrl">
+  <div class="message-area" ng-repeat="message in messages">
+    {{message.username}}, {{message.timestamp}}</br>
+    {{message.message}}
+  </div>
+
+  <form if-user id="chat-form" class="form-horizontal">
+    <div class="chat-divider"></div>
+    <textarea type="text" ng- class="chat-textform form-control col-sm-3 col-md-2"></textarea>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-warning">Clear</button>
+  </form>
+</div>

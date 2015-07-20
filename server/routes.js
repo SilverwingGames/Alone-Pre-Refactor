@@ -17,8 +17,9 @@ module.exports = function(app) {
   spMiddleware.attachDefaults(app);
 
   // Insert routes below
+  app.use('/api/users', spAuth, require('./api/user'));
+  app.use('/api/features', require('./api/feature'));
   app.use('/api/events', spAuth, require('./api/event'));
-  app.use('/api/things', spAuth, require('./api/thing'));
 
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')

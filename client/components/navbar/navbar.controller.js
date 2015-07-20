@@ -11,6 +11,10 @@ angular.module('aloneApp')
         'title': 'Reddit',
         'type': '_blank',
         'link': 'https://www.reddit.com/r/alone_incremental/'
+      },
+      {
+        'title': 'Game',
+        'link': '/game'
       }
     ];
 

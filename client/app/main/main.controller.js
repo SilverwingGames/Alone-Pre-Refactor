@@ -2,10 +2,10 @@
 
 angular.module('aloneApp')
   .controller('MainCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [];
+    $scope.features = [];
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
+    $http.get('/api/features').success(function(featureList) {
+      $scope.features = featureList;
     });
 
   });

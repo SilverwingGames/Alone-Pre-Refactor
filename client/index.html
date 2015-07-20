@@ -22,12 +22,14 @@
       <!-- injector:css -->
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/emailVerification/emailVerification.css">
+      <link rel="stylesheet" href="app/game/game.css">
       <link rel="stylesheet" href="app/login/login.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/passwordReset/passwordReset.css">
       <link rel="stylesheet" href="app/passwordResetRequest/passwordResetRequest.css">
       <link rel="stylesheet" href="app/profile/profile.css">
       <link rel="stylesheet" href="app/register/register.css">
+      <link rel="stylesheet" href="components/chatbox/chatbox.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
@@ -68,12 +70,15 @@
       <script src="bower_components/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.min.js"></script>
       <script src="bower_components/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.tpls.min.js"></script>
       <!-- endbower -->
+    <script src="/socket.io/socket.io.js"></script>
     <!-- endbuild -->
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
           <!-- injector:js -->
           <script src="app/emailVerification/emailVerification.controller.js"></script>
           <script src="app/emailVerification/emailVerification.js"></script>
+          <script src="app/game/game.controller.js"></script>
+          <script src="app/game/game.js"></script>
           <script src="app/login/login.controller.js"></script>
           <script src="app/login/login.js"></script>
           <script src="app/main/main.controller.js"></script>
@@ -86,6 +91,8 @@
           <script src="app/profile/profile.js"></script>
           <script src="app/register/register.controller.js"></script>
           <script src="app/register/register.js"></script>
+          <script src="app/socket/socket.service.js"></script>
+          <script src="components/chatbox/chatbox.controller.js"></script>
           <script src="components/modal/modal.service.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->

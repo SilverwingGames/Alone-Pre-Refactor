@@ -13,13 +13,23 @@ var config = require('./config/environment');
 var app = express();
 var server = require('http').createServer(app);
 
+// Socket.IO setup
+var io = require('socket.io').listen(server);
+
+
 require('./config/express')(app);
 require('./routes')(app);
+
+io.sockets.on('connection', function(socket){
+  // Move this
+});
 
 // Start server
 server.listen(config.port, config.ip, function () {
   console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
 });
+
+server.listen(9000);
 
 // Expose app
 exports = module.exports = app;

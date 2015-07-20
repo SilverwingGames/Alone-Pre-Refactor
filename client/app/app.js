@@ -20,6 +20,6 @@ angular.module('aloneApp', [
   .run(function($stormpath){
     $stormpath.uiRouter({
       loginState: 'login',
-      defaultPostLoginState: 'main'
+      defaultPostLoginState: 'game'
     });
   });
